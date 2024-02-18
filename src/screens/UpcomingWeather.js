@@ -57,11 +57,12 @@ const UpcomingWeather = () => {
           max = {item.main.temp_max}
         />
     )
-  return (
-    <SafeAreaView style ={styles.container}>
+    const {container,image} = styles;
+    return (
+     <SafeAreaView style ={container}>
         <ImageBackground
           source={require('../../assets/upcoming-background.jpg')} 
-          style={styles.image}>
+          style={image}>
           <Text>UpcomingWeather</Text>
           <FlatList 
             data={DATA} 
@@ -69,7 +70,7 @@ const UpcomingWeather = () => {
             keyExtractor= {(item) => item.dt_text}/>
 
         </ImageBackground>
-    </SafeAreaView>
+     </SafeAreaView>
   )
 }
 
