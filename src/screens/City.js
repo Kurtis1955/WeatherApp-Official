@@ -9,9 +9,7 @@ const City = () => {
          <Text style={[styles.cityName, styles.cityText]}>Accra</Text> 
          <Text style={[styles.countryName, styles.cityText]}>Ghana</Text>
          <View style={styles.populationWrapper}>
-            <Feather name={'user'} size={50} color={'aqua'}/>
-            <Text style={styles.populationText}>8000 Population</Text>
-         </View>
+        </View>
          <View style={styles.riseSetWrapper}>
             <Feather name={'sunrise'} size={50} color={'white'}/>
             <Text style={styles.riseSetText}>10:16:23 am</Text>
@@ -52,8 +50,7 @@ const styles = StyleSheet.create({
     populationText:{
         fontSize:25,
         marginLeft:7.5,
-        color:'yellow',
-        fontWeight:'bold'
+        color:'yellow',   
     },
     riseSetWrapper:{
         flexDirection:'row',
@@ -63,8 +60,7 @@ const styles = StyleSheet.create({
     },
     riseSetText:{
         fontSize:20,
-        color: '#fff',
-        fontWeight:'bold'
+        color: '#fff'
     }
 })
 export default City;
