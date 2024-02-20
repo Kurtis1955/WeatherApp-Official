@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {View, SafeAreaView,Text,StyleSheet,ImageBackground,StatusBar } from 'react-native';
 import { Feather } from '@expo/vector-icons';
