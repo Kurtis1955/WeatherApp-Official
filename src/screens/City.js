@@ -10,7 +10,7 @@ const City = () => {
          <Text style={[styles.countryName, styles.cityText]}>Ghana</Text>
          <View style={styles.populationWrapper}>
             <Feather name={'user'} size={50} color={'aqua'}/>
-            <Text style={styles.populationText}>8000</Text>
+            <Text style={styles.populationText}>8000 Population</Text>
          </View>
          <View style={styles.riseSetWrapper}>
             <Feather name={'sunrise'} size={50} color={'white'}/>
