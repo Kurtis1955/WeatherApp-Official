@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, SafeAreaView,Text,StyleSheet,ImageBackground,StatusBar } from 'react-native';
 import { Feather } from '@expo/vector-icons';
+import IconText from '../components/IconText';
 
 const City = () => {
   return (
@@ -9,10 +10,27 @@ const City = () => {
          <Text style={[styles.cityName, styles.cityText]}>Accra</Text> 
          <Text style={[styles.countryName, styles.cityText]}>Ghana</Text>
          <View style={styles.populationWrapper}>
-        </View>
+            <IconText 
+              iconName={'user'}
+              iconColor={'aqua'} 
+              bodyText={'8000 population'} 
+              bodyTextStyles={styles.populationText} 
+            />
+         </View>
          <View style={styles.riseSetWrapper}>
-            <Feather name={'sunrise'} size={50} color={'white'}/>
-            <Text style={styles.riseSetText}>10:16:23 am</Text>
+         <IconText 
+              iconName={'sunrise'}
+              iconColor={'#fff'} 
+              bodyText={'10:16:23am'} 
+              bodyTextStyles={styles.riseSetText} 
+            />
+            
+            <IconText 
+              iconName={'sunset'}
+              iconColor={'#fff'} 
+              bodyText={'17:45:36pm'} 
+              bodyTextStyles={styles.populationText} 
+            />
             <Feather name={'sunset'} size={50} color={'white'}/>
             <Text style={styles.riseSetText}>17:45:36 pm</Text>
          </View>
