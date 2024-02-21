@@ -1,6 +1,5 @@
 import React from 'react';
 import {View, SafeAreaView,Text,StyleSheet,ImageBackground,StatusBar } from 'react-native';
-import { Feather } from '@expo/vector-icons';
 import IconText from '../components/IconText';
 
 const City = () => {
@@ -14,25 +13,22 @@ const City = () => {
               iconName={'user'}
               iconColor={'aqua'} 
               bodyText={'8000 population'} 
-              bodyTextStyles={styles.populationText} 
+              bodyTextStyles={[styles.populationText ,styles.rowLayout]} 
             />
          </View>
-         <View style={styles.riseSetWrapper}>
+         <View style={[styles.riseSetWrapper ,styles.rowLayout]}>
          <IconText 
               iconName={'sunrise'}
               iconColor={'#fff'} 
               bodyText={'10:16:23am'} 
               bodyTextStyles={styles.riseSetText} 
-            />
-            
+            />           
             <IconText 
               iconName={'sunset'}
               iconColor={'#fff'} 
               bodyText={'17:45:36pm'} 
-              bodyTextStyles={styles.populationText} 
+              bodyTextStyles={styles.riseSetText} 
             />
-            <Feather name={'sunset'} size={50} color={'white'}/>
-            <Text style={styles.riseSetText}>17:45:36 pm</Text>
          </View>
       </ImageBackground>
     </SafeAreaView>
@@ -60,8 +56,6 @@ const styles = StyleSheet.create({
         color: "#fff"  
     },
     populationWrapper:{
-        flexDirection:'row',
-        alignItems:'center',
         justifyContent:'center',
         marginTop:30
     },
@@ -71,14 +65,16 @@ const styles = StyleSheet.create({
         color:'yellow',   
     },
     riseSetWrapper:{
-        flexDirection:'row',
-        alignItems: 'center',
         justifyContent:'space-around',
         marginTop: 30
     },
     riseSetText:{
         fontSize:20,
         color: '#fff'
+    },
+    rowLayout:{
+        flexDirection:'row',
+        alignItems:'center'
     }
 })
 export default City;
