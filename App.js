@@ -22,7 +22,13 @@ const App = () =>{
              size={25} 
              color={focused ? 'tomato':'#000'}/>)
       }} />
-      <Tab.Screen name={'Upcoming'} component={UpcomingWeather} />
+      <Tab.Screen name={'Upcoming'} component={UpcomingWeather} options={{
+        tabBarIcon:({focused}) => 
+          (<Feather 
+             name={'clock'} 
+             size={25} 
+             color={focused ? 'tomato':'#000'}/>)
+      }}/>
       <Tab.Screen name={'City'} component={City} />
       </Tab.Navigator>
     </NavigationContainer>
