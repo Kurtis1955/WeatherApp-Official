@@ -29,7 +29,13 @@ const App = () =>{
              size={25} 
              color={focused ? 'tomato':'#000'}/>)
       }}/>
-      <Tab.Screen name={'City'} component={City} />
+      <Tab.Screen name={'City'} component={City} options={{
+        tabBarIcon:({focused}) => 
+          (<Feather 
+             name={'home'} 
+             size={25} 
+             color={focused ? 'tomato':'#000'}/>)
+      }}/>
       </Tab.Navigator>
     </NavigationContainer>
   )
