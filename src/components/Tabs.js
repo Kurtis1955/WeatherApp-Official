@@ -5,6 +5,7 @@ import City from '../screens/City';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Feather } from '@expo/vector-icons';
 
+
 const Tab = createBottomTabNavigator()
 
 const Tabs = () => {
@@ -12,7 +13,18 @@ const Tabs = () => {
     <Tab.Navigator
     screenOptions={{
      tabBarActiveTintColor:"tomato",
-     tabBarInactiveTintColor:"grey"
+     tabBarInactiveTintColor:"grey",
+     tabBarStyle:{
+      backgroundColor:"lightblue"
+     },
+     headerStyle:{
+      backgroundColor:'lightblue'
+     },
+     headerTitleStyle:{
+      fontSize:25,
+      fontWeight:'bold',
+      color:'tomato'
+     }
     }}>
  <Tab.Screen name={'Current'} component={CurrentWeather} options={{
    tabBarIcon:({focused}) => 
